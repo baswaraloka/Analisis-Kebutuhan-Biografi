@@ -4,36 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Analisis Kebutuhan (Peserta Didik)</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
 </head>
 <body class="bg-gray-100 py-10">
   <div class="max-w-3xl mx-auto bg-white p-10 rounded-xl shadow-lg">
     <h1 class="text-3xl font-bold mb-8 text-center text-gray-800">Kuesioner Media Pembelajaran Teks Biografi</h1>
-   
-  
-      <!-- Nama Lengkap -->
+
+    <form id="kuesionerForm">
+      <!-- Input Fields -->
       <div>
         <label class="block font-medium text-lg mb-1">Nama Lengkap</label>
         <input type="text" name="nama_lengkap" required class="w-full rounded-xl border px-4 py-2" />
       </div>
 
-      <!-- Kelas -->
       <div>
         <label class="block font-medium text-lg mb-1">Kelas</label>
         <input type="text" name="kelas" required class="w-full rounded-xl border px-4 py-2" />
       </div>
 
-      <!-- Sekolah -->
       <div>
         <label class="block font-medium text-lg mb-1">Sekolah</label>
         <input type="text" name="sekolah" required class="w-full rounded-xl border px-4 py-2" />
       </div>
 
-      <!-- Pertanyaan 1 -->
       <div>
-        <label class="block font-medium text-lg mb-2">
-          1. Apakah kalian suka membaca, terutama teks biografi? Mengapa demikian?
-        </label>
+        <label class="block font-medium text-lg mb-2">1. Apakah kalian suka membaca, terutama teks biografi? Mengapa demikian?</label>
         <select name="p1_skala" required class="w-full rounded-xl border px-4 py-2 mb-2">
           <option value="">Pilih Skala (1–5)</option>
           <option value="2">2</option>
@@ -44,35 +39,23 @@
         <textarea name="p1_alasan" rows="3" class="w-full rounded-xl border px-4 py-2" placeholder="Tulis alasanmu di sini..."></textarea>
       </div>
 
-      <!-- Pertanyaan 2 -->
       <div>
-        <label class="block font-medium text-lg mb-2">
-          2. Apakah kalian tertarik dengan materi teks biografi dalam pembelajaran bahasa Indonesia? Berikan alasan kalian!
-        </label>
+        <label class="block font-medium text-lg mb-2">2. Apakah kalian tertarik dengan materi teks biografi dalam pembelajaran bahasa Indonesia? Berikan alasan kalian!</label>
         <textarea name="p2" rows="4" class="w-full rounded-xl border px-4 py-2" required></textarea>
       </div>
 
-      <!-- Pertanyaan 3 -->
       <div>
-        <label class="block font-medium text-lg mb-2">
-          3. Media apa saja yang digunakan guru dalam pembelajaran materi teks biografi?
-        </label>
+        <label class="block font-medium text-lg mb-2">3. Media apa saja yang digunakan guru dalam pembelajaran materi teks biografi?</label>
         <textarea name="p3" rows="4" class="w-full rounded-xl border px-4 py-2" required></textarea>
       </div>
 
-      <!-- Pertanyaan 4 -->
       <div>
-        <label class="block font-medium text-lg mb-2">
-          4. Apakah media tersebut membantu kalian memahami materi teks biografi dengan baik? Mengapa demikian?
-        </label>
+        <label class="block font-medium text-lg mb-2">4. Apakah media tersebut membantu kalian memahami materi teks biografi dengan baik? Mengapa demikian?</label>
         <textarea name="p4" rows="4" class="w-full rounded-xl border px-4 py-2" required></textarea>
       </div>
 
-      <!-- Pertanyaan 5 -->
       <div>
-        <label class="block font-medium text-lg mb-2">
-          5. Seberapa sering kalian mencari atau membaca informasi terkait materi pelajaran di internet, terutama materi teks biografi? Berikan alasannya!
-        </label>
+        <label class="block font-medium text-lg mb-2">5. Seberapa sering kalian mencari atau membaca informasi terkait materi pelajaran di internet, terutama materi teks biografi? Berikan alasannya!</label>
         <select name="p5_skala" required class="w-full rounded-xl border px-4 py-2 mb-2">
           <option value="">Pilih Skala (1–5)</option>
           <option value="2">2</option>
@@ -83,11 +66,8 @@
         <textarea name="p5_alasan" rows="3" class="w-full rounded-xl border px-4 py-2"></textarea>
       </div>
 
-      <!-- Pertanyaan 6 -->
       <div>
-        <label class="block font-medium text-lg mb-2">
-          6. Apa saja faktor yang membuat kalian nyaman dan lebih mudah memahami materi pelajaran di internet? (Boleh lebih dari satu)
-        </label>
+        <label class="block font-medium text-lg mb-2">6. Apa saja faktor yang membuat kalian nyaman dan lebih mudah memahami materi pelajaran di internet? (Boleh lebih dari satu)</label>
         <div class="space-y-1 ml-2 text-sm">
           <label><input type="checkbox" name="p6[]" value="Tampilan desain situs yang menarik" /> Tampilan desain situs yang menarik</label><br>
           <label><input type="checkbox" name="p6[]" value="Kecepatan akses" /> Kecepatan akses</label><br>
@@ -98,28 +78,45 @@
           <label><input type="checkbox" name="p6[]" value="Bebas memilih bagian yang ingin diakses" /> Bebas memilih bagian yang ingin diakses</label><br>
           <label><input type="checkbox" name="p6[]" value="Tersedia latihan soal atau kuis interaktif" /> Tersedia latihan soal atau kuis interaktif</label><br>
           <label><input type="checkbox" name="p6[]" value="Tersedia forum diskusi" /> Tersedia forum diskusi</label><br>
-          <label><span class="mr-2">Lainnya:</span>
-            <input type="text" name="p6_lainnya" class="border px-2 py-1 rounded-md" />
-          </label>
+          <label><span class="mr-2">Lainnya:</span><input type="text" name="p6_lainnya" class="border px-2 py-1 rounded-md" /></label>
         </div>
       </div>
 
-      <!-- Pertanyaan 7 -->
       <div>
-        <label class="block font-medium text-lg mb-2">
-          7. Apakah kalian tertarik apabila ada media pembelajaran materi teks biografi berupa situs web? Bagaimana pendapat kalian?
-        </label>
+        <label class="block font-medium text-lg mb-2">7. Apakah kalian tertarik apabila ada media pembelajaran materi teks biografi berupa situs web? Bagaimana pendapat kalian?</label>
         <textarea name="p7" rows="4" class="w-full rounded-xl border px-4 py-2" required></textarea>
       </div>
 
-      <!-- Tombol Submit -->
       <div class="text-center pt-4">
-        <button type="submit" style="background:#ffaa2c;color:white;border:none;padding:0.75rem 1.2rem;border-radius:0.75rem;margin-top:1.5rem;font-size:1rem;font-weight:600;cursor:pointer;width:100%;">
-          Kirim
-        </button>
+        <button type="submit" class="bg-yellow-500 text-white px-6 py-3 rounded-xl font-semibold w-full">Kirim</button>
       </div>
     </form>
+
+    <div id="suksesMsg" class="text-green-600 text-center font-semibold mt-4 hidden">
+      Terima kasih, jawaban Anda berhasil dikirim!
+    </div>
   </div>
+
+  <script>
+    document.getElementById("kuesionerForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+
+      fetch("PASTE_URL_APPS_SCRIPT_KAMU_DI_SINI", {
+        method: "POST",
+        body: data
+      })
+      .then(response => response.text())
+      .then(result => {
+        document.getElementById("suksesMsg").classList.remove("hidden");
+        form.reset();
+      })
+      .catch(error => {
+        alert("Terjadi kesalahan. Silakan coba lagi.");
+        console.error("Error:", error);
+      });
+    });
+  </script>
 </body>
 </html>
-
